@@ -2,11 +2,11 @@
 <html lang="zxx">
 
 <head>
-    <title>Blaxcut - Barbershop Website Template</title>
-    <link rel="icon" href="images/icon.png" type="image/gif" sizes="16x16">
+    <title>FadeOClock | Contact</title>
+    <link rel="icon" href="images/Logos/logo-mobile.png" type="image/gif" sizes="16x16">
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="width=device-width, initial-scale=1.0" name="viewport" >
-    <meta content="Blaxcut - Barbershop Website Template" name="description" >
+    <meta content="FadeOClock | Contact" name="description" >
     <meta content="" name="keywords" >
     <meta content="" name="author" >
     <!-- CSS Files
@@ -19,6 +19,8 @@
     <link href="css/coloring.css" rel="stylesheet" type="text/css" >
     <!-- color scheme -->
     <link id="colors" href="css/colors/scheme-01.css" rel="stylesheet" type="text/css" >
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body class="dark-scheme">
@@ -116,18 +118,18 @@
                         <div class="col-lg-4 col-md-4 text-center">
                             <i class="fa fa-map-marker de-icon gradient de-hover-scale text-light mb20"></i>
                             <p class="lead no-bottom">Our Address</p>
-                            <h4 class="s2">100 Mainstreet Center, NY</h4>
+                            <h4 class="s2">40a Oldfield Rd, Maidenhead SL6 1TW, UK</h4>
                            
                         </div>
                         <div class="col-lg-4 col-md-4 text-center">
                             <i class="fa fa-phone de-icon gradient de-hover-scale text-light mb20"></i>
                             <p class="lead no-bottom">Phone Number</p>
-                            <h4 class="s2">+1 333 9296</h4>                                                
+                            <h4 class="s2">+44 7475 555547</h4>                                                
                         </div>
                         <div class="col-lg-4 col-md-4 text-center">
                             <i class="fa fa-envelope-o de-icon gradient de-hover-scale text-light mb20"></i>
                             <p class="lead no-bottom">Email Address</p>
-                            <h4 class="s2">contact@suppport.com</h4>     
+                            <h4 class="s2">info@fadeoclock.co.uk</h4>     
                         </div>
                     </div>
                 </div>
@@ -147,7 +149,7 @@
                                 If you got any questions, please do not hestitae to send us a message.
                                 </p>
 
-                                <form name="contactForm" id="contact_form" class="form-border position-relative z1000" method="post" action="#">
+                                <form name="contactForm" id="contact_form" class="form-border position-relative z1000" method="POST">
                                     <div class="row">
                                         <div class="col-lg-12 mb10">
                                             <div class="field-set">
@@ -169,7 +171,7 @@
                                     <div class="field-set mb20">
                                         <textarea name="message" id="message" class="form-control" placeholder="Your Message" required></textarea>
                                     </div>
-                                    <div class="g-recaptcha" data-sitekey="copy-your-site-key-here"></div>
+                                    <!-- <div class="g-recaptcha" data-sitekey="6LcAlPQqAAAAAP4vxcrywqxXO8SDLtPpoVb0u096"></div> -->
                                     <div id='submit' class="mt20">
                                         <input type='submit' id='send_message' value='Send Message' class="btn-main">
                                     </div>
@@ -196,11 +198,11 @@
                             <h4>Follow Us</h4>
                             <div class="spacer-20"></div>
                             <div class="social-icons big">
-                                <a href="#"><i class="fa fa-facebook fa-lg"></i></a>
-                                <a href="#"><i class="fa fa-twitter fa-lg"></i></a>
-                                <a href="#"><i class="fa fa-linkedin fa-lg"></i></a>
-                                <a href="#"><i class="fa fa-pinterest fa-lg"></i></a>
-                                <a href="#"><i class="fa fa-rss fa-lg"></i></a>
+                                <a href="https://www.facebook.com/people/Fade-oclock-Barbers/100081457594045/" target="_blank"><i class="fa fa-facebook fa-lg"></i></a>
+                                <a href="https://www.instagram.com/fade.oclock_barbers/#" target="_blank"><i class="fa fa-instagram fa-lg"></i></a>
+                                <a href="https://www.tiktok.com/@fadeoclockbarbers?_t=8ZEqf3Cfzug&_r=1" target="_blank"><i class="fa fa-tiktok fa-lg"></i></a>
+                                <!-- <a href="#"><i class="fa fa-pinterest fa-lg"></i></a>
+                                <a href="#"><i class="fa fa-rss fa-lg"></i></a> -->
                             </div>
                         </div>
                     </div>
@@ -216,9 +218,9 @@
                     
                     <div class="col-lg-4 text-lg-start text-center">
                         <div class="social-icons">
-                            <a href="https://www.facebook.com/people/Fade-oclock-Barbers/100081457594045/"><i class="fa fa-facebook fa-lg"></i></a>
-                            <a href="https://www.instagram.com/fade.oclock_barbers/#"><i class="fa fa-instagram fa-lg"></i></a>
-                            <a href="https://www.tiktok.com/@fadeoclockbarbers?_t=8ZEqf3Cfzug&_r=1"><i class="fab fa-tiktok fa-lg"></i></a>
+                            <a href="https://www.facebook.com/people/Fade-oclock-Barbers/100081457594045/" target="_blank"><i class="fa fa-facebook fa-lg"></i></a>
+                            <a href="https://www.instagram.com/fade.oclock_barbers/#" target="_blank"><i class="fa fa-instagram fa-lg"></i></a>
+                            <a href="https://www.tiktok.com/@fadeoclockbarbers?_t=8ZEqf3Cfzug&_r=1" target="_blank"><i class="fab fa-tiktok fa-lg"></i></a>
                             <!-- <a href="#"><i class="fa fa-pinterest fa-lg"></i></a>
                             <a href="#"><i class="fa fa-rss fa-lg"></i></a> -->
                         </div>
@@ -237,10 +239,74 @@
     
     <!-- Javascript Files
     ================================================== -->
+    <script>
+        document.getElementById('contact_form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var name = document.getElementById('name').value.trim();
+            var email = document.getElementById('email').value.trim();
+            var phone = document.getElementById('phone').value.trim();
+            var message = document.getElementById('message').value.trim();
+
+            if ( name == '' || email == '' || phone == '' || message == '' ) {
+                displayError("Please fill in all fields before submitting.");
+                return;
+            }
+
+            if( !/^\S+@\S+\.\S+$/.test(email)){
+                displayError("Please enter a valid email address.");
+                return;
+            }
+            var whatsappNumber = '923336745933';
+            var whatsappMessage = `*MESSAGE*\n\nName: ${name}\nEmail: ${email}\nPhone Number: ${phone}\nMessage: ${message}.`;
+            
+            var whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+            const newWindow = window.open(whatsappUrl, '_blank');
+            if ( newWindow ) {
+                document.getElementById('success_message').style.display = 'block';
+                document.getElementById('error_message').style.display = 'none';
+            }
+            else {
+                document.getElementById('success_message').style.display = 'none';
+                document.getElementById('error_message').style.display = 'block';
+            }
+            document.getElementById('contact_form').reset();
+            // var formData = {
+            //     name: document.getElementById('name').value,
+            //     email: document.getElementById('email').value,
+            //     phone: document.getElementById('phone').value,
+            //     message: document.getElementById('message').value,
+            // }
+            // fetch('https://script.google.com/macros/s/AKfycbyVyDoyThA7ozW5asmrAFpdvOevBWLD34V502tPh8k1UQBGA-Sq7Ud-0zbPXJG_O-dH/exec',{
+            //     method: 'POST',
+
+            //     body: JSON.stringify(formData),
+            //     headers: {
+            //         'Content-Type': 'application/json'
+            //     }
+            // })
+            // .then(response => response.json())
+            // .then(data => {
+            //     console.log('Success:', data);
+            //     document.getElementById('contact_form').reset();
+            //     document.getElementById('success_message').style.display = 'block';
+            //     document.getElementById('error_message').style.display = 'none';
+            // })
+            // .catch((error) => {
+            //     console.error('Error:', error);
+            //     document.getElementById('success_message').style.display = 'none';
+            //     document.getElementById('error_message').style.display = 'block';
+            // });
+        });
+        function displayError(message) {
+            document.getElementById('error_message').style.display = 'block';
+            document.getElementById('error_message').innerText = message;
+            document.getElementById('success_message').style.display = 'none';
+        }
+    </script>
     <script src="js/plugins.js"></script>
     <script src="js/designesia.js"></script>
-    <script src='https://www.google.com/recaptcha/api.js' async defer></script>
-    <script src="form.js"></script>
+    <!-- <script src='https://www.google.com/recaptcha/api.js' async defer></script> -->
+    <!-- <script src="form.js"></script> -->
 </body>
 
 </html>

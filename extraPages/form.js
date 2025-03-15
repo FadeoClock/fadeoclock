@@ -3,6 +3,8 @@ $(function()
 {
     function after_form_submitted(data) 
     {
+        console.log("Response from server:", data); 
+
         if(data.result == 'success')
         {
             $('#success_message').show();
@@ -40,6 +42,7 @@ $(function()
         e.preventDefault();
 
         $form = $(this);
+        console.log("Form submitted");
         //show some response on the button
         $('button[type="submit"]', $form).each(function()
         {
@@ -50,13 +53,16 @@ $(function()
         });
         
 
-                    $.ajax({
-                type: "POST",
-                url: 'handler.php',
-                data: $form.serialize(),
-                success: after_form_submitted,
-                dataType: 'json' 
-            });        
+        $.ajax({
+            type: "POST",
+            url: 'handler.php',
+            data: $form.serialize(),
+            success: after_form_submitted,
+            error: function (jqXHR, textStatus, errorThrown) {
+                console.error("AJAX Error:", textStatus, errorThrown); // Debug: Log AJAX errors
+            },
+            dataType: 'json' 
+        });        
         
       });	
 });
