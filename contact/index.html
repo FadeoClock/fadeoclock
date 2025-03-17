@@ -238,10 +238,11 @@
                 displayError("Please enter a valid email address.");
                 return;
             }
-            var whatsappNumber = '923336745933';
-            var whatsappMessage = `*MESSAGE*\n\nName: ${name}\nEmail: ${email}\nPhone Number: ${phone}\nMessage: ${message}.`;
+            var whatsappNumber = '+447475555547';
+            var whatsappMessage = `*Message - FadeOClock Barbershop*\n\n*Name:* ${name}\n*Email:* ${email}\n*Phone:* ${phone}\n*Message:* ${message}.\n\nThank you! I look forward to hearing from you.`;
             
-            var whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+            // var whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+            var whatsappUrl = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(whatsappMessage)}`;
             const newWindow = window.open(whatsappUrl, '_blank');
             if ( newWindow ) {
                 document.getElementById('success_message').style.display = 'block';

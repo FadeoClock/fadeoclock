@@ -440,8 +440,11 @@
                 displayError("Please enter a valid email address.");
                 return;
             }
-            var whatsappNumber = '+923155326090';
-            var whatsappMessage = `*BOOKING DETAILS*\n\n*Name:* ${name}\n*Email:* ${email}\n*Phone:* ${phone}\n*Date:* ${date}\n*Time:* ${time}\n*Staff:* ${staff}\n*Services:* ${services.join(', ')}\n*Message:* ${message}`;
+            var whatsappNumber = '+447475555547';
+            if (message === '') {
+                message = 'No additional notes.';
+            }
+            var whatsappMessage = `*Booking Appointment - FadeOClock Barbershop*\n\n*Name:* ${name}\n*Email:* ${email}\n*Phone:* ${phone}\n*Date:* ${date}\n*Time:* ${time}\n*Staff:* ${staff}\n*Services:* ${services.join(', ')}\n*Additional Notes:* ${message}\n\nThank you! I look forward to my appointment.`;
             var whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
             try {
                 window.open(whatsappUrl, '_blank');
